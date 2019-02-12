@@ -43,7 +43,9 @@ module.exports = function(o) {
         }
         if (state.opts.prependIds && typeof state.opts.prependIds.forEach === 'function') {
           state.opts.prependIds.forEach(function (id) {
-            args.unshift(t.Identifier(id));
+            let idNode = t.Identifier(id);
+            idNode.loc = path.node.loc;
+            args.unshift(idNode);
           });
         }
 

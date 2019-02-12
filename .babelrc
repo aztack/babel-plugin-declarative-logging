@@ -6,6 +6,6 @@
         "__error": "error"
       },
       "decorativeIds": ["_","__","___","____"],
-      "prependIds": "a"
+      "prependIds": ["__debug"]
   }]]
 }
