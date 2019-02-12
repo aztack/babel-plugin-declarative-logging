@@ -27,7 +27,7 @@ const B = {
     // object literal should be wrapped with parenthesis
     __warn: ({name:"a"}), __;
   },
-  __warn (...args) {
+  warn (...args) {
     console.warn(...args);
   }
 }
