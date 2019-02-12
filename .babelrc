@@ -5,6 +5,7 @@
         "__warn": "warn",
         "__error": "error"
       },
-      "decorativeIds": ["_","__","___","____"]
+      "decorativeIds": ["_","__","___","____"],
+      "prependIds": "a"
   }]]
 }

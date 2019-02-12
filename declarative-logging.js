@@ -41,6 +41,11 @@ module.exports = function(o) {
         } else {
           args = [path.node.body.expression]
         }
+        if (state.opts.prependIds && typeof state.opts.prependIds.forEach === 'function') {
+          state.opts.prependIds.forEach(function (id) {
+            args.unshift(t.Identifier(id));
+          });
+        }
 
         // replace labels with method call
         const method = mapping[name];
