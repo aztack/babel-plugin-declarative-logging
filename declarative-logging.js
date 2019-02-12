@@ -19,8 +19,12 @@ module.exports = function(o) {
         if (!path.parentPath) return;
         if (!path.parentPath.parent) return;
 
+        if (!path.parentPath.parentPath) return;
         const parentType = path.parentPath.parent.type;
-        if (parentType !== 'ClassMethod' && parentType != 'ObjectMethod') return;
+        const grandParentType = path.parentPath.parentPath.parent.type;
+        if (parentType !== 'ClassMethod' && parentType !== 'ObjectMethod' &&
+          grandParentType !== 'ClassMethod' && grandParentType !== 'ObjectMethod') return;
+
 
         const mapping = state.opts.mapping || DefaultMapping;
         // skip unsupported lables
