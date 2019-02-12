@@ -1,0 +1,11 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "declarative-logging.js",
+  "scripts": {
+    "test": "babel test.js"
+  },
+  "author": "aztack@163.com",
+  "license": "MIT"
+}

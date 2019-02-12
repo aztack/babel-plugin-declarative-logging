@@ -1,0 +1,10 @@
+{
+  "plugins":[["./declarative-logging.js", {
+      "mapping":{
+        "__log": "log",
+        "__warn": "warn",
+        "__error": "error"
+      },
+      "decorativeIds": ["_","__","___","____"]
+  }]]
+}
