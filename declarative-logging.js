@@ -9,6 +9,7 @@ const DecorativeIds = ["_","__","___","____"];
 module.exports = function(o) {
   const t = o.types;
   return {
+    name: 'babel-plugin-declarative-logging',
     visitor: {
       LabeledStatement (path, state) {
         if (!state.opts || typeof state.opts !== 'object') return;
